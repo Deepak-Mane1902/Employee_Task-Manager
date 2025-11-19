@@ -16,8 +16,9 @@ const Login = () => {
       
   }
   return (
-    <div className='w-screen h-screen  flex items-center justify-center'>
-      <div className="border-2 border-emerald-600 px-20 py-20 rounded-4xl shadow-xl shadow-emerald-800">
+    <div className='relative w-screen h-screen  flex items-center justify-center'>
+      <h1 className='absolute left-[4vw] top-[4vh] text-4xl uppercase !text-emerald-800'>Login</h1>
+      <div className=" border-2 border-emerald-600 px-20 py-20 rounded-4xl shadow-xl shadow-emerald-800">
         <form onSubmit={(e)=>{
           submitHandler(e)
         }} className='flex flex-col items-center justify-center gap-2'>

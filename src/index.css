@@ -6,3 +6,35 @@
 body{
      background-color: #111;
 }
+
+#tasklist::-webkit-scrollbar{
+display: none ;
+}
+
+#adminInput{
+     
+     background-color:#101010;
+     width: 34vw;
+     height: 8vh;
+     line-height: 20px;
+     padding-left: 20px;
+     padding-right: 20px;
+     border-radius:10px;
+     -webkit-border-radius:10px;
+     -moz-border-radius:10px;
+     -ms-border-radius:10px;
+     -o-border-radius:10px;
+     outline: none;
+}
+#adminInput::placeholder{
+     color: dimgray;
+}
+
+.left-admin h3{
+     color: whitesmoke;
+     padding-left: 1.3vw;
+     padding-bottom: 0.5vh;
+}
+.allTaskScrollY::-webkit-scrollbar{
+display: none ;
+}
