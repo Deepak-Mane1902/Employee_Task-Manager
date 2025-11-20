@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 
-const Login = () => {
+const Login = ({handleLogin}) => {
 
-  const [isEmail, setEmail] = useState('')
-  const [isPassword, setPassword] = useState('')
+  // console.log(handleLogin)
+
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const submitHandler=(e)=>{
       e.preventDefault();
-      console.log("Submitted");
-      console.log(isEmail);
-      console.log(isPassword);
-
+      handleLogin(email,password)
       setEmail('');
       setPassword('');
       
@@ -23,9 +23,9 @@ const Login = () => {
           submitHandler(e)
         }} className='flex flex-col items-center justify-center gap-2'>
           
-          <input value={isEmail} onChange={(e)=>{setEmail(e.target.value)}} required className='text-xl outline-none border-2 border-emerald-600 rounded-full text-start px-12 py-4 placeholder:text-white/80 ' type="email" placeholder='Enter Your Email'  />
+          <input value={email} onChange={(e)=>{setEmail(e.target.value)}} required className='text-xl outline-none border-2 border-emerald-600 rounded-full text-start px-12 py-4 placeholder:text-white/80 ' type="email" placeholder='Enter Your Email'  />
 
-          <input value={isPassword} onChange={(e)=>{setPassword(e.target.value)}} required className=' text-xl outline-none  border-2 border-emerald-600 rounded-full text-start px-12 py-4 placeholder:text-white/80 ' type="password" placeholder='Enter Your password ' />
+          <input value={password} onChange={(e)=>{setPassword(e.target.value)}} required className=' text-xl outline-none  border-2 border-emerald-600 rounded-full text-start px-12 py-4 placeholder:text-white/80 ' type="password" placeholder='Enter Your password ' />
 
           <button className='font-bold text-xl hover:bg-emerald-900 cursor-pointer   border-none bg-emerald-600 px-14 py-4 mt-4 rounded-full'>Log in</button>
         </form>
