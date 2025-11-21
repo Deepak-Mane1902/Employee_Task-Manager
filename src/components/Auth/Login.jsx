@@ -17,17 +17,18 @@ const Login = ({handleLogin}) => {
   }
   return (
     <div className='relative w-screen h-screen  flex items-center justify-center'>
-      <h1 className='absolute left-[4vw] top-[4vh] text-4xl uppercase !text-emerald-800'>Login</h1>
-      <div className=" border-2 border-emerald-600 px-20 py-20 rounded-4xl shadow-xl shadow-emerald-800">
+      <div className=" relative border-2 border-emerald-600 px-15 py-26 rounded-4xl ">
+              <h1 className='absolute  right-[20%] top-[4vh] text-4xl uppercase 
+              !text-emerald-400 font-bold '>Registration</h1>
         <form onSubmit={(e)=>{
           submitHandler(e)
-        }} className='flex flex-col items-center justify-center gap-2'>
+        }} className='flex flex-col items-center justify-center mt-14 gap-4'>
           
-          <input value={email} onChange={(e)=>{setEmail(e.target.value)}} required className='text-xl outline-none border-2 border-emerald-600 rounded-full text-start px-12 py-4 placeholder:text-white/80 ' type="email" placeholder='Enter Your Email'  />
+          <input value={email} onChange={(e)=>{setEmail(e.target.value)}} required className='text-xl outline-none border-2 border-emerald-600 rounded-2xl text-start px-12 py-3 placeholder:text-white/80 ' type="email" placeholder='Enter your email...'  />
 
-          <input value={password} onChange={(e)=>{setPassword(e.target.value)}} required className=' text-xl outline-none  border-2 border-emerald-600 rounded-full text-start px-12 py-4 placeholder:text-white/80 ' type="password" placeholder='Enter Your password ' />
+          <input value={password} onChange={(e)=>{setPassword(e.target.value)}} required className=' text-xl outline-none  border-2 border-emerald-600 rounded-2xl text-start px-12 py-3 placeholder:text-white/80 ' type="password" placeholder='Enter your password... ' />
 
-          <button className='font-bold text-xl hover:bg-emerald-900 cursor-pointer   border-none bg-emerald-600 px-14 py-4 mt-4 rounded-full'>Log in</button>
+          <button className='font-semibold text-xl hover:bg-emerald-900 cursor-pointer   border-none bg-emerald-600 px-14 py-4 mt-4 rounded-2xl transition-all ease-in-out duration-100 uppercase'>Log in</button>
         </form>
       </div>
     </div>

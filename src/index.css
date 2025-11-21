@@ -38,3 +38,6 @@ display: none ;
 .allTaskScrollY::-webkit-scrollbar{
 display: none ;
 }
+.allTaskScrollX::-webkit-scrollbar{
+display: none ;
+}
